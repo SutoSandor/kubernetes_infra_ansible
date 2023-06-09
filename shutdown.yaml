@@ -1,0 +1,9 @@
+---
+- name: Shut down CentOS servers
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Shut down servers
+      become: yes
+      shell: shutdown -h now
